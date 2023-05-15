@@ -16,12 +16,12 @@ let songs = [
     {songName: "Desires - AP Dhillon | Gurinder Gill", filePath: "songs/4.mp3", coverPath: "covers/4.jpg"},
     {songName: "No Love - Shubh", filePath: "songs/5.mp3", coverPath: "covers/5.jpg"},
     {songName: "Ma Belle - AP Dhillon", filePath: "songs/6.mp3", coverPath: "covers/6.jpg"},
-    {songName: "Starboy - The Weeknd", filePath: "songs/7.mp3", coverPath: "covers/6.jpg"},
-    {songName: "Rubicon Drill", filePath: "songs/8.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Rubicon Drill", filePath: "songs/9.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Rubicon Drill", filePath: "songs/10.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Rubicon Drill", filePath: "songs/11.mp3", coverPath: "covers/1.jpg"},
-    {songName: "Rubicon Drill", filePath: "songs/12.mp3", coverPath: "covers/1.jpg"}
+    {songName: "Maiyya Mainu - Sachet-Parampara", filePath: "songs/7.mp3", coverPath: "covers/7.jpg"},
+    {songName: "Nazm Nazm - Arko", filePath: "songs/8.mp3", coverPath: "covers/8.jpg"},
+    {songName: "Apna Bana Le - Arijit Singh | Sachin-Jigar", filePath: "songs/9.mp3", coverPath: "covers/9.jpg"},
+    {songName: "O Bedardeya - Arijit Singh", filePath: "songs/10.mp3", coverPath: "covers/10.jpg"},
+    {songName: "Kesariya - Arijit Singh", filePath: "songs/11.mp3", coverPath: "covers/11.jpg"},
+    {songName: "Pasoori - Ali Sethi | Shae Gill", filePath: "songs/12.mp3", coverPath: "covers/12.jpg"}
 ]
 
 songItems.forEach((element, i)=>{
@@ -79,6 +79,7 @@ songItemsPlay.forEach((element)=>{
         e.target.classList.add('fa-pause-circle');
         audioElement.src = `songs/${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
+        document.getElementById("seekcover").src = songs[songIndex].coverPath;
         audioElement.currentTime = 0;
         audioElement.play();
         gif.style.opacity = 1;
@@ -96,6 +97,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     }
         audioElement.src = `songs/${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
+        document.getElementById("seekcover").src = songs[songIndex].coverPath;
         audioElement.currentTime = 0;
         audioElement.play();
         masterPlay.classList.remove('fa-play');
@@ -110,8 +112,32 @@ document.getElementById('previous').addEventListener('click', ()=>{
     }
         audioElement.src = `songs/${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
+        document.getElementById("seekcover").src = songs[songIndex].coverPath;
         audioElement.currentTime = 0;
         audioElement.play();
         masterPlay.classList.remove('fa-play');
         masterPlay.classList.add('fa-pause');
 })
+// function getAudioFileLength(location) {
+//     return new Promise((resolve, reject) => {
+//       const audio = new Audio();
+//       audio.addEventListener('loadedmetadata', () => {
+//         const duration = audio.duration;
+//         resolve(duration);
+//       });
+//       audio.addEventListener('error', (error) => {
+//         reject(error);
+//       });
+//       audio.src = location;
+//     });
+//   }
+  
+//   // Usage example
+//   const audioLocation = 'songs/7.mp3'; // Replace with your audio file location
+//   getAudioFileLength(audioLocation)
+//     .then((duration) => {
+//       console.log('Audio duration:', duration);
+//     })
+//     .catch((error) => {
+//       console.error('Error:', error);
+//     });

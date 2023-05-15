@@ -24,6 +24,8 @@ nav ul{
 nav ul li{
     color: white;
     padding: 0px 10px;
+    cursor: pointer;
+    
 
 }
 .logo img{
