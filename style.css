@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Varela+Round&display=swap');
+
+
+body{
+    background-color: #1DB954;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: 'Montserrat', sans-serif;    
+}
+nav ul{
+    list-style-type: none;
+    height: 50px;
+    background-color: rgb(14, 52, 6);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav ul li{
+    color: white;
+    padding: 0px 10px;
+
+}
+.logo img{
+    
+    width: 35px;
+    padding: 0px 8px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.container{
+    min-height: 70vh;
+    background-color: rgb(38, 38, 38);
+    color: white;
+    font-family: 'Varella Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 80%;
+    border-radius: 20px;
+    padding: 50px;
+    background-image: url('bg.png');
+    box-shadow: black 0px 0px 15px 0px;
+
+    
+}
+.bottom{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: sticky;
+    height: 200px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 1) 40%);
+    mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 1) 40%);
+}
+#myProgressBar{
+    width: 80vw;
+    text-align: center;
+    margin-top: 90px;
+    cursor: pointer;    
+}
+.icons{
+    margin-top: 15px
+}
+.icons i{
+    cursor: pointer;   
+    padding: 0px 15px; 
+}
+.icons i:hover{
+    cursor: pointer;   
+    padding: 0px 15px; 
+    -webkit-filter: drop-shadow(0px 0px 10px #ffffff);
+    filter: drop-shadow(0px 0px 10px #ffffff);
+    transition: 0.5s ;
+
+}
+.songslist{
+    box-shadow: rgb(0, 0, 0) 0px 0px 15px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80vh;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.songslist h1{
+    margin: 0px auto;
+    text-shadow: 2px 2px 5px #00ff37;
+}
+.songItemContainer{
+    margin-top: 20px;
+}
+.songItem img{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: black 0px 0px 5px 0px;
+
+}
+.songItem{
+
+    height: 50px;
+    display: flex;
+    background-color: #b91d82d5;
+    width: 100%;
+    color: balck;
+    margin: 24px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: black 0px 0px 15px 0px;
+}
+.timestamp{
+    
+   margin: 0px 20px;
+}
+.timestamp i{
+    cursor: pointer;
+
+}
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    top: 8.5vw;
+    font-family: 'Montserrat', sans-serif;  
+}
+#gif{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    width: 40px;
+}
+.songCover{
+    height: 90px;
+    position: absolute;
+    left: 2vw;
+    top: 5.5vw;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: rgb(0, 191, 255);
+    }
+  }
